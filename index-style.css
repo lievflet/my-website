@@ -1,0 +1,83 @@
+/* index-style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body.index-page {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8faff; /* Background color specific to index page */
+    color: #333;
+    position: relative;
+    z-index: 1;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+body.index-page::before {
+    --s: 140px; /* the size */
+    --g: 35px;  /* the gap */ 
+    --r: 15px;  /* the radius */
+    
+    content: "";
+    position: fixed;
+    inset: var(--g);
+    --_g: radial-gradient(var(--r) at var(--r) var(--r),#000 98%,#0000);
+    --_o: calc(-2*var(--r) - var(--g));
+    -webkit-mask:
+      var(--_g),var(--_g) var(--_o) 0,var(--_g) 0 var(--_o),var(--_g) var(--_o) var(--_o),
+      conic-gradient(at calc(var(--s) - 2*var(--r)) var(--s),#0000 75%,#000 0) var(--r) 0,
+      conic-gradient(at var(--s) calc(var(--s) - 2*var(--r)),#0000 75%,#000 0) 0 var(--r);
+    -webkit-mask-size: calc(var(--s) + var(--g)) calc(var(--s) + var(--g));
+    background: linear-gradient(45deg, rgba(1, 192, 250, 0.012), rgba(135, 207, 235, 0.323)); /* 80% opaque colors */
+    z-index: -1; /* Ensure this background is behind other content */
+  }
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 50px); /* Full height minus the height of the navbar */
+    padding: 20px;
+}
+
+.highlight {
+    color: #00cbc4;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.intro p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0 40px; /* Add padding to the left and right */
+}
+
+.interests span {
+    color: #ffb800;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 20px; /* Add space to the left and right of each item */
+}
+
+.work-button {
+    background-color: #a4f086;
+    border: none;
+    padding: 15px 30px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.work-button:hover {
+    background-color: #91e076;
+}

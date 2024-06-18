@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body.contact-page {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Different background color for About page */
+    color: #333;
+    position: relative;
+    z-index: 1;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+body.contact-page::before {
+  --s: 140px; /* the size */
+  --g: 35px;  /* the gap */ 
+  --r: 15px;  /* the radius */
+  
+  content: "";
+  position: fixed;
+  inset: var(--g);
+  --_g: radial-gradient(var(--r) at var(--r) var(--r),#000 98%,#0000);
+  --_o: calc(-2*var(--r) - var(--g));
+  -webkit-mask:
+    var(--_g),var(--_g) var(--_o) 0,var(--_g) 0 var(--_o),var(--_g) var(--_o) var(--_o),
+    conic-gradient(at calc(var(--s) - 2*var(--r)) var(--s),#0000 75%,#000 0) var(--r) 0,
+    conic-gradient(at var(--s) calc(var(--s) - 2*var(--r)),#0000 75%,#000 0) 0 var(--r);
+  -webkit-mask-size: calc(var(--s) + var(--g)) calc(var(--s) + var(--g));
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(235, 135, 135, 0.294)); /* Different gradient for About page */
+  z-index: -1; /* Ensure this background is behind other content */
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 50px); /* Full height minus the height of the navbar */
+    padding: 20px;
+}
+
+.highlight {
+    color: #00cbc4;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.intro p {
+    font-size: 24px;
+    font-weight: 400;
+}
