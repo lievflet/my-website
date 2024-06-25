@@ -1,8 +1,8 @@
-/* index-style.css */
 
+/* Index Page */
 
 body.index-page {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: Opificio;
     margin: 0;
     padding: 0;
     background: #FCFCFC; /* Different background color for About page */
@@ -10,7 +10,7 @@ body.index-page {
     background-attachment: fixed;
     background-size: cover;
     color: #333;
-  }
+}
 
 .home-intro {
     display: flex;
@@ -21,6 +21,7 @@ body.index-page {
     height: calc(100vh - 50px); /* Full height minus the height of the navbar */
     padding: 20px;
 }
+
 
 .home-highlight {
     color: #00C9B2;
@@ -35,7 +36,7 @@ body.index-page {
 .home-intro{
     color: #000;
     font-family: Opificio;
-    font-size: 30px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -47,10 +48,9 @@ body.index-page {
     flex-wrap: wrap;
     justify-content: center;
     margin: 20px 0;
-    padding: 0 40px; /* Add padding to the left and right */
 }
 
-.interests span {
+.interests pre {
     color: var(--Fruit-orange, #FAAB11);
     font-family: "Varela Round";
     font-size: 30px;
@@ -58,7 +58,6 @@ body.index-page {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.25px;
-    margin: 0 20px; /* Add space to the left and right of each item */
 }
 
 .work-button {
@@ -96,6 +95,7 @@ body.about-page {
     background-size: cover;
     color: #333;
 }
+
 .about-me-intro {
     font-family: Opificio;
     font-size: 30px;
@@ -107,6 +107,7 @@ body.about-page {
     width: 65%;
     height: 20%;
 }
+
 .about-me-highlight {
     font-family: "Typo Hoop Demo";
     color: #FAAB11;
@@ -128,9 +129,9 @@ body.portfolio-page {
     background-attachment: fixed;
     background-size: cover;
     color: #333;
-  }
+}
   
-  .portfolio-intro {
+.portfolio-intro {
     font-family: "Opificio";
     font-size: 30px;
     font-weight: 400;
@@ -140,8 +141,9 @@ body.portfolio-page {
     padding-left: 25%;
     width: 65%;
     height: 20%;
-  }
-  .portfolio-highlight {
+}
+
+.portfolio-highlight {
     font-family: "Typo Hoop Demo";
     color: #00C9B2;
     font-size: 30px;
@@ -149,8 +151,8 @@ body.portfolio-page {
     text-align: right;
     padding-right: 20%;
     padding-top: 15%;
-  }
-
+}
+  
 /* Resume Page */
 
 body.resume-page {
@@ -174,8 +176,10 @@ body.resume-page {
     padding-left: 25%;
     width: 65%;
     height: 20%;
-  }
-  .resume-highlight {
+
+}
+  
+.resume-highlight {
     font-family: "Typo Hoop Demo";
     color: #98DE56;
     font-size: 30px;
@@ -183,7 +187,7 @@ body.resume-page {
     text-align: right;
     padding-right: 20%;
     padding-top: 15%;
-  }
+}
 
 /* Contact Page */
 
@@ -196,9 +200,10 @@ body.contact-page {
     background-attachment: fixed;
     background-size: cover;
     color: #333;
-  }
+}
   
-  .contact-intro {
+  
+.contact-intro {
     font-family: "Opificio";
     font-size: 30px;
     font-weight: 400;
@@ -208,8 +213,9 @@ body.contact-page {
     padding-left: 25%;
     width: 65%;
     height: 20%;
-  }
-  .contact-highlight {
+}
+  
+.contact-highlight {
     font-family: "Typo Hoop Demo";
     color: #86DF31;
     font-size: 30px;
@@ -217,11 +223,11 @@ body.contact-page {
     text-align: right;
     padding-right: 20%;
     padding-top: 15%;
-  }
+}
 
-  /* Responsive CSS */
+/* Responsive CSS */
 
-  @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .highlight {
        padding-right: 25%;
        padding-top: 25%;
@@ -231,6 +237,11 @@ body.contact-page {
       font-size: 25px;
       padding-right: 25%;
       padding-left: 25%
+    }
+    .interests span {
+        font-size: 25px;
+        padding-right: 25%;
+        padding-left: 25%;
     }
     body.portfolio-page {
         background-image:   url(assets/images/portfolio-tablet.svg);
@@ -244,9 +255,12 @@ body.contact-page {
     body.about-page {
         background-image:   url(assets/images/about-me-tablet.svg);
     }
-  }
+    body.index-page {
+        background-image:   url(assets/images/index-tablet.svg);
+    }
+}
   
-  @media only screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .highlight {
       padding-right: 25%;
       padding-top: 25%;
@@ -257,4 +271,4 @@ body.contact-page {
      padding-right: 25%;
      padding-left: 25%
    }
-  }
+}
